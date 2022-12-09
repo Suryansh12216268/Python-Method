@@ -6,14 +6,14 @@ obj1.method1()
 obj1.method1("Ram")
 obj1.method1("Ram", "Good Morning")
 
-class parent:
+class child:
     def method2(self):
-        print("Parent")
-class child(parent):
+        print("child")
+class parent(child):
     def method1(self):
-        print("Child")
+        print("parent")
 
-obj1 = child()
+obj1 = parent()
 obj1.method1()
 obj1.method2()
 
@@ -43,11 +43,13 @@ class Calculation2:
 class Derived(Calculation1, Calculation2): # Multiple Ingheritance
     def Divide(self,a,b):
         return a/b
+class subtraction(calculation1, calculation2):
+    def substraction(self, a,b):
 d = Derived()
 print(d.Summation(10,20))
 print(d.Multiplication(100,200))
 print(d.Divide(100,20))
-
+print(d.divide(200,100)
 class Animal:
     def speak(self):
         print("speaking")
